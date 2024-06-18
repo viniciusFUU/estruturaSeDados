@@ -28,6 +28,7 @@ public class Vetores {
             throw new IllegalArgumentException("Posição inválida.");
         }
 
+<<<<<<< HEAD
         return elementos[posicao];     
     }
 
@@ -39,6 +40,10 @@ public class Vetores {
         }
 
         return -1;
+=======
+        return elementos[posicao];
+        
+>>>>>>> 3595addda13a16f3fd4739d60900fad1037fff3a
     }
 
 }

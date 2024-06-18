@@ -1,7 +1,5 @@
 package com;
 
-import java.util.Arrays;
-
 public class Vetores {
     private String[] elementos;
     private int contador = 0;

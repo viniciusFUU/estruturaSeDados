@@ -28,8 +28,19 @@ public class Vetores {
             throw new IllegalArgumentException("Posição inválida.");
         }
 
-        return elementos[posicao];
-        
+        return elementos[posicao];     
+    }
+
+    public int busca(String elemento) throws Exception{
+        for (int i = 0; i < this.contador; i++){
+            if (elementos[i].equals(elemento)){
+                return i;
+            } else {
+                throw new Exception("Não existe o elemento");
+            }
+        }
+
+        return -1;
     }
 
 }

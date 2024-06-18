@@ -40,4 +40,15 @@ public class Vetores {
         return -1;
     }
 
+    public void adiciona(int posicao, String elemento){
+        if (!(posicao >= 0 && posicao < this.contador)){
+            throw new IllegalArgumentException("Posição inválida.");
+        }
+
+        for (int i = contador-1; i >= posicao; i--){
+                elementos[i+1] = elementos[i];
+            }
+    
+        elementos[posicao] = elemento;
+    }
 }

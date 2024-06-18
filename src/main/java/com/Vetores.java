@@ -1,7 +1,5 @@
 package com;
 
-import java.util.Arrays;
-
 public class Vetores {
     private String[] elementos;
     private int contador = 0;
@@ -30,8 +28,17 @@ public class Vetores {
             throw new IllegalArgumentException("Posição inválida.");
         }
 
-        return elementos[posicao];
-        
+        return elementos[posicao];     
+    }
+
+    public int busca(String elemento) throws Exception{
+        for (int i = 0; i < this.contador; i++){
+            if (elementos[i].equals(elemento)){
+                return i;
+            }
+        }
+
+        return -1;
     }
 
 }

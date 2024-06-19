@@ -9,6 +9,8 @@ public class Vetores {
     }
 
     public void adiciona(String elemento) throws Exception{
+        aumentaCapacidade()
+        
         if(elementos.length > contador){
             if (elementos[contador] == null){
                 elementos[contador] = elemento;
@@ -41,6 +43,8 @@ public class Vetores {
     }
 
     public void adiciona(int posicao, String elemento){
+        aumentaCapacidade();
+
         if (!(posicao >= 0 && posicao < this.contador)){
             throw new IllegalArgumentException("Posição inválida.");
         }
@@ -50,5 +54,16 @@ public class Vetores {
             }
     
         elementos[posicao] = elemento;
+    }
+
+    public void aumentaCapacidade(){
+        if (elementos.length == contador-1){
+            String[] elementosNovos = new String[elementos.length * 2];
+
+            for (int i = 0; i < elementos.length){
+                elementosNovos[i] = elementos[i];
+            }
+            this.elementos = elementosNovos;
+        }
     }
 }

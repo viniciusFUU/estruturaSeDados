@@ -66,4 +66,17 @@ public class Vetores {
             this.elementos = elementosNovos;
         }
     }
+
+    public void removeElemento(String elemento){
+        for (int i = 0; i < contador; i++){
+            if (elemento.equals(elementos[i])){
+                for (int j = i; j < contador-1; j++){
+                    elementos[j] = elementos[j+1];
+                }
+                elementos[contador -1] = null;
+                contador-=1;
+                break;
+            }
+        }
+    }
 }

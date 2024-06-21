@@ -11,10 +11,13 @@ public class Aula06{
             vetor.adiciona("Elemento 4");
             vetor.adiciona("Elemento 5");
             vetor.adiciona("Elemento 6");
+
+            vetor.removeElemento("Elemento 3");
+
+            System.out.println("oi");
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        vetor.removeElemento("Elemento 3");
     }
 }
